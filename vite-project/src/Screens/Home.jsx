@@ -5,8 +5,6 @@ import image from "../assets/image1.jpeg";
 
 function Home() {
   return (
-    <>
-      {/* This contain the whole set of the home page */}
       <div
         className="sm:w-[100%] sm:h-[100vh]"
         style={{
@@ -60,7 +58,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
+  
   );
 }
 

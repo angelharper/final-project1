@@ -5,7 +5,7 @@ import image from "../assets/image1.jpeg";
 
 function About() {
   return (
-    <>
+    
       <div
         style={{
           width: "100%",
@@ -56,7 +56,7 @@ function About() {
           </div>
         </div>
       </div>
-    </>
+    
   );
 }
 

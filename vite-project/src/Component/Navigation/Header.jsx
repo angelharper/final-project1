@@ -55,6 +55,12 @@ function Header() {
               <li>ABOUT</li>
             </Link>
 
+            <Link 
+              to="/upload-wardrobe" 
+              style={{ textDecoration: "none", color: "rgb(85,60,36)" }}>
+                <li>WARDROBE</li>
+            </Link>
+
             <Link
               to="/inspiration"
               style={{ textDecoration: "none", color: "rgb(85,60,36)" }}
@@ -83,7 +89,7 @@ function Header() {
             sx={{ fontSize: 15, width: "15vw", height: "6vh" }}
             variant="contained"
           >
-            Sign Up
+            Login
             
           </Button>
           </Link>
