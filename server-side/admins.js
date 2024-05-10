@@ -1,0 +1,1 @@
+const admins = [{"email":"admin@example.com","password":"admin123"},{"email":"mbo@mzil.com","password":"1234"},{"email":"owami@nana.com","password":"456"},{"email":"ntsiki@project.com","password":"12345"},{"email":"mbo@example.com","password":"4567"}]; module.exports = admins;
