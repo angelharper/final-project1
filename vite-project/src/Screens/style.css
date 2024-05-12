@@ -3,7 +3,7 @@
 .upload-container {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     height: 100%;
     padding: 20px;
     padding-left: 50px;
@@ -84,7 +84,7 @@
   }
   
   .button-orange {
-    background-color: #ff9800;
+    background-color: #8a5402f7;
   }
 
 
@@ -119,15 +119,45 @@
   .submit-button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: rgba(124,88,52,255);
     border: none;
     color: white;
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .logout-button {
+    width: 200%;
+    /* padding: 10px; */
+    background-color: rgba(124,88,52,255);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .logout-button:hover {
+    background-color: #998772;
+  }
+
+  .login-button {
+    width: auto;
+    padding: 10px;
+    background-color:rgba(124,88,52,255);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15;
+
+  }
+
+  .login-button:hover {
+    background-color: #998772;
+  }
   
   .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #998772;
   }
   
   .checkbox {

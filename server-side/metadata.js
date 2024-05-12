@@ -60,5 +60,15 @@ module.exports = [
       "1"
     ],
     "imageURL": "/uploads/dress1.jpg"
+  },
+  {
+    "name": "blake_1.jpg",
+    "tags": [
+      "formal"
+    ],
+    "code": [
+      "2"
+    ],
+    "imageURL": "/uploads/blake_1.jpg"
   }
 ];

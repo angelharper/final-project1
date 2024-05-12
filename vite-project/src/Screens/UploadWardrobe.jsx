@@ -29,13 +29,9 @@ function UploadWardrobe() {
 
     const handleCodeSelection = (event) => {
         const code = event.target.value;
-        
-        if (event.target.checked){
-            setSelectedCode([...selectedCode, code]);
-        } else {
-            setSelectedCode(selectedCode.filter(t => t !== code));
-        }
-        
+
+        setSelectedCode(code);
+
     };
 
     const handleSubmit = async (event) => {
@@ -53,11 +49,12 @@ function UploadWardrobe() {
         // Prepare FormData object to send files to server
         const formData = new FormData();
         for (let i = 0; i < files.length; i++) {
-            formData.append('images', files[i]);
+            formData.append('image', files[i]);
         }
+        console.log(formData);
 
         // Send files to server-side API
-        const response = await fetch('http://localhost:3000/api/upload', {
+        const response = await fetch('http://localhost:3000/api/image/upload-image', {
             method: 'POST',
             body: formData,
         });
@@ -84,7 +81,7 @@ function UploadWardrobe() {
 
 
         // Send metadata to server-side API
-        const metadataResponse = await fetch('http://localhost:3000/api/metadata', {
+        const metadataResponse = await fetch('http://localhost:3000/api/image/upload-image', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -140,16 +137,27 @@ function UploadWardrobe() {
           backgroundImage: `url(${image})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
-          backgroundAttachment: "fixed",}}>
+          backgroundAttachment: "fixed",
+          opacity: 0.8
+          }}>
             <div>
 
             </div>
-            <div style={{flex: "0.15", display: "flex", flexDirection: "row", paddingTop: '17.5px'}}>
+            <div style={{flex: 1, display: "flex", flexDirection: "row", paddingTop: '17.5px'}}>
                 <Header/>
             </div>
+
+            <div style={{marginLeft: "80px"}}>
+                    <div style={{flex: ".85", display: "flex", justifyContent: "center", marginTop: "20px"}}>
+                        <h1>Existing Wardrobe</h1>
+                    </div>
+                    <div>
+                        <DisplayUploadedImages/>
+                    </div>
+            </div>
             <div>
-                <div style={{flex: ".85", display: "flex", justifyContent: "center"}}>
-                <h1 >Upload Your Wardrobe</h1>
+                <div style={{flex: ".85", display: "flex", justifyContent: "center", marginTop: "20px"}}>
+                <h1 >Upload A Wardrobe Item</h1>
                 </div>
                 <div className="upload-container">
                     <form onSubmit={handleSubmit}>
@@ -218,9 +226,10 @@ function UploadWardrobe() {
                         <label htmlFor='code'><h3>Select Image Code</h3></label>
                         <label>
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     value="1"
-                                    checked={selectedCode.includes("1")}
+                                    name='code'
+                                    checked={selectedCode === "1"}
                                     onChange={handleCodeSelection}
                                 />
                                 <span style={{paddingLeft: '10px'}}>Upper body wear</span>
@@ -228,9 +237,10 @@ function UploadWardrobe() {
                             </label>
                             <label>
                                 <input
-                                    type="checkbox"
+                                    type="radio"
                                     value="2"
-                                    checked={selectedCode.includes("2")}
+                                    name='code'
+                                    checked={selectedCode === "2"}
                                     onChange={handleCodeSelection}
                                 />
                                 <span style={{paddingLeft: '10px'}}>Lower body wear</span>
@@ -238,7 +248,7 @@ function UploadWardrobe() {
                             </label>
                             </div>
                         </div>
-                        <button type='submit'>Upload</button>
+                        <button type='submit' style={{backgroundColor: "rgba(124,88,52,255)", marginTop: "10px"}}>Upload</button>
                     </form>
                 </div>
                 
@@ -257,14 +267,7 @@ function UploadWardrobe() {
                 </div> */}
             {/* <button onClick={() => handleImageSelection(imageTages)}>Select Images</button> */}
             </div>
-            <div style={{marginLeft: "80px"}}>
-                    <div style={{flex: ".85", display: "flex", justifyContent: "center", marginTop: "80px"}}>
-                        <h1>Existing Wardrobe</h1>
-                    </div>
-                    <div>
-                        <DisplayUploadedImages/>
-                    </div>
-                </div>
+        
         </div>    
   )
 }

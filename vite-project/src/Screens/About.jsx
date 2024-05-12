@@ -10,12 +10,13 @@ function About() {
         style={{
           width: "100%",
           height: "100vh",
-          background: "peru",
+          background: "white",
           display: "flex",
           flexDirection: "column",
-          backgroundImage: `url(${image})`,
+          // backgroundImage: `url(${image})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
+          // opacity: 0.8
         }}
       >
         {/* This is the first flex in column direction  */}
@@ -25,6 +26,8 @@ function About() {
             // background: "red",
             display: "flex",
             flexDirection: "row",
+            paddingTop: '17.5px',
+            borderRadius: "10px"
           }}
         >
           <Header />
@@ -36,9 +39,10 @@ function About() {
           style={{
             flex: ".85",
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingTop: "-180%",
+            // justifyContent: "center",
+            // alignItems: "center",
+            backgroundImage: `url(${image})`,
+            paddingTop: "5%",
           }}
         >
           <div
@@ -50,8 +54,14 @@ function About() {
             }}
           >
             <div style={{ fontSize: "4em" }}>About</div>
-            <div style={{ fontSize: "1.4em" }}>
-            This is a virtual wardrobe website inspired by modern-day lifestyle, where convenience, organization, and style intersect to meet the growing need for individuals to efficiently manage their clothing collections while staying on top of fashion trends. Style Wizard is the culmination of technology, fashion, and lifestyle needs, aiming to provide users with a convenient, organized, and fashion-forward solution for managing their clothing collections.
+            <div style={{ fontSize: "1.6em", padding: "20px", backgroundColor: "#998772", fontWeight: "bold"}}>
+            This is a virtual wardrobe website inspired by modern-day lifestyle, 
+            where convenience, organization, and style intersect to meet the growing
+             need for individuals to efficiently manage their clothing collections 
+             while staying on top of fashion trends. Style Wizard is the culmination
+              of technology, fashion, and lifestyle needs, aiming to provide users 
+              with a convenient, organized, and fashion-forward solution for managing
+               their clothing collections.
             </div>
           </div>
         </div>

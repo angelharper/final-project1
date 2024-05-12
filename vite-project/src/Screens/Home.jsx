@@ -13,9 +13,10 @@ function Home() {
           //   background: "peru",
           display: "flex",
           flexDirection: "column",
-          backgroundImage: `url(${image})`,
+          // backgroundImage: `url(${image})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
+          opacity: 0.8,
         }}
       >
         {/* This is the first flex in column direction  */}
@@ -25,6 +26,7 @@ function Home() {
             // background: "red",
             display: "flex",
             flexDirection: "row",
+            paddingTop: '17.5px'
           }}
         >
           <Header />
@@ -39,6 +41,7 @@ function Home() {
             justifyContent: "center",
             alignItems: "center",
             paddingTop: "-120%",
+            backgroundImage: `url(${image})`,
           }}
         >
           <div

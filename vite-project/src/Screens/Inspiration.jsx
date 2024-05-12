@@ -56,16 +56,17 @@ function shuffleArray(array) {
         style={{
           width: '100%',
           height: '160vh',
-          backgroundImage: `url(${image})`, // Assuming 'image' is imported elsewhere
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          display: 'flex',
+          // backgroundImage: `url(${image})`, // Assuming 'image' is imported elsewhere
+          // backgroundSize: 'contain',
+          // backgroundPosition: 'center',
+          // display: 'flex',
           flexDirection: 'column',
+          // opacity: 0.8
         }}
       >
         <div
           style={{
-            flex: '.1',
+            flex: '.2',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -80,6 +81,7 @@ function shuffleArray(array) {
             // flex: '.7',
             display: 'flex',
             flexDirection: 'column',
+            backgroundImage: `url(${image})`,
           }}
         >
           <div
@@ -108,9 +110,8 @@ function shuffleArray(array) {
             <ul><button className="button button-orange" onClick={() => handleCategoryClick('picnic')}>Picnic</button></ul>
             {/* <ul><button className="button button-orange" onClick={() => handleCategoryClick('beach')}>Beach</button></ul> */}
           </div>
-        </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', flexDirection: "column", alignItems: 'center', gap: 30 }}>
+          <div style={{ display: 'flex', justifyContent: 'center', flexDirection: "column", alignItems: 'center', gap: 30 }}>
           {shuffledImages.slice(0,2).map((image, index) => (
             <img
               key={index}
@@ -119,6 +120,7 @@ function shuffleArray(array) {
               style={{ width: '200px', height: '200px' }}
             />
           ))}
+        </div>
         </div>
       </div>
     
